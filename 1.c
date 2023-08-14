@@ -37,18 +37,18 @@ Pessoa criarPessoa(){
     return pessoa;
 }
 
-void mostrarPessoa(Pessoa pessoa){
+void mostrarPessoa(Pessoa *pessoa){
 
     printf("\n");
-    printf("Nome: %s", pessoa.nome);
+    printf("Nome: %s", pessoa->nome);
     printf("\n");
-    printf("Idade: %d anos", pessoa.idade);
+    printf("Idade: %d anos", pessoa->idade);
     printf("\n");
-    printf("Altura: %.2f m.", pessoa.altura);
+    printf("Altura: %.2f m.", pessoa->altura);
     printf("\n");
-    printf("Peso: %.2f kg.", pessoa.peso);
+    printf("Peso: %.2f kg.", pessoa->peso);
     printf("\n");
-    printf("Sexo: %c", pessoa.sexo);
+    printf("Sexo: %c", pessoa->sexo);
 }
 
 
@@ -56,7 +56,7 @@ int main(){
 
     Pessoa pessoa = criarPessoa();
 
-    mostrarPessoa(pessoa);
+    mostrarPessoa(&pessoa);
 
     return 0;
 }
